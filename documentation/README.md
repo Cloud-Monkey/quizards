@@ -162,7 +162,8 @@ https://quiz-heads-c1d86a4688ff.herokuapp.com
 - Colour scheme http://colormind.io/
 - Question generation https://perplexity.ai
 - Wizard icons created by Freepik - Flaticon https://www.flaticon.com/free-icons/wizard
-- Quiz Wizard image https://pro-quiz-wizard.netlify.app/
+- Quiznarg the wizard free image https://www.clipartmax.com/middle/m2i8i8m2Z5N4G6N4_download-wizard-free-png-photo-images-and-clipart-wizard-png/
+<!-- - Quiz Wizard image https://pro-quiz-wizard.netlify.app/ -->
 - Quizards text logo https://www.textstudio.com/
 - Stackoverflow https://stackoverflow.co/
   
