@@ -34,12 +34,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-mgwgh-hackathon3-bwhosp7hnkm.ws.codeinstitute-ide.net', # Dave
-    '8000-mgwgh-hackathon3-amurexk4ww1.ws.codeinstitute-ide.net', # Charles
-    '8000-mgwgh-hackathon3-553n9riw25z.ws.codeinstitute-ide.net', # Matt
+    '8000-cloudmonkey-quizards-mtfj8vke81o.ws.codeinstitute-ide.net',
     '.herokuapp.com',
     ]
 
@@ -67,7 +65,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'hackathon3.urls'
 
@@ -146,7 +148,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
