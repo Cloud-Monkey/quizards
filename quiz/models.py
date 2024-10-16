@@ -10,10 +10,7 @@ class CustomUserModel(AbstractUser):
 STATUS = ((0, "General Knowledge"), (1, "Sport"), (2, "History"), (3, "Science & Nature"), (4, "Music & Media"), (5, "Past adventure"))
 
 class Question(models.Model):
-    """
-    I had to replace this line so that we can customise the registration form - Charles
-    #user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_stamps", null=True)
-    """
+    
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="blog_stamps", null=True)
     question = models.CharField(max_length=500, unique=True)
     answer = models.CharField(max_length=500, unique=False)
