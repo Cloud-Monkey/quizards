@@ -5,9 +5,6 @@ from django.core.exceptions import ValidationError
 from datetime import date
 from . models import CustomUserModel
 
-"""
-User registration form
-"""
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
     forename = forms.CharField(max_length=30, required=True, help_text='Required. Enter your first name.')
