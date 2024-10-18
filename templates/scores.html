@@ -27,7 +27,13 @@
                         <td>{{ user.username }}</td>
                         <td>{{ user.correct_answers }}</td>
                         <td>{{ user.total_answers }}</td>
-                        <td>{{ user.percentage_correct|floatformat:0 }}%</td>
+                        <td>
+                            {% if user.total_answers > 0 %}
+                            {{ user.percentage_correct|floatformat:0 }}%
+                            {% else %}
+                            N/A
+                            {% endif %}
+                        </td>
                     </tr>
                     {% empty %}
                     <tr>

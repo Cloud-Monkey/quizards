@@ -104,6 +104,10 @@ class UserLogoutView(LogoutView):
     next_page = reverse_lazy('home')
 
 
+from django.views.generic import TemplateView
+from django.db.models import Count, F, Case, When, FloatField
+from django.contrib.auth import get_user_model
+
 class ScoresPage(TemplateView):
     """
     Displays scores page
@@ -119,8 +123,12 @@ class ScoresPage(TemplateView):
         scores = CustomUser.objects.annotate(
             correct_answers=Count('useranswer', filter=F('useranswer__is_correct')),
             total_answers=Count('useranswer'),
-            percentage_correct=Count('useranswer', filter=F('useranswer__is_correct')) * 100.0 / Count('useranswer')
-        ).order_by('-percentage_correct')[:5]  # Get top 5 users by percentage
+            percentage_correct=Case(
+                When(total_answers=0, then=0),
+                default=F('correct_answers') * 100.0 / F('total_answers'),
+                output_field=FloatField()
+            )
+        ).order_by('-percentage_correct', '-correct_answers')[:5]  # Get top 5 users by percentage
 
         context['scores'] = scores  # Add scores to context
         return context
