@@ -2,6 +2,8 @@
 
 # Project overview 
 
+## live site https://dashboard.heroku.com/apps/quizards/deploy/github
+
 Quizards is a digital platform for Trivia enthusiasts. Built with Django, it allows registered users to tackle 5 quiz questions daily. With a user-friendly interface and engaging content, it aims to make learning convenient and interactive. 
 
 This daily quiz format aims to set the app apart by fostering consistent engagement while enhancing general knowledge retention.
