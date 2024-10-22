@@ -10,9 +10,7 @@ This daily quiz format aims to set the app apart by fostering consistent engagem
 
 https://quiz-heads-c1d86a4688ff.herokuapp.com
 
-![am I responsive img]()
-
-![am I responsive img]()
+![am I responsive img](/documentation/readme-images/responsvie-quizards.png)
 
 ### How To Play
 
