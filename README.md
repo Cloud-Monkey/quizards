@@ -309,6 +309,7 @@ Follow the above Django Project Steps if you wish to work on the project.
 - Quiz Wizard image https://pro-quiz-wizard.netlify.app/
 - Quizards text logo https://www.textstudio.com/
 - Stackoverflow https://stackoverflow.co/
+- background video https://www.pexels.com/search/videos/background%20subtle/
   
 ## Future features
 

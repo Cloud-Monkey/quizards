@@ -126,8 +126,23 @@ h6 {
 	display: flex;
 	justify-content: center;
 }
-/* 
-.background-img-file{
-	background-image: url("paper.gif");
- 	background-color: #cccccc;
+
+/* #bg-video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -2;
+	background-size: cover;
+}
+
+.content-wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
 } */
