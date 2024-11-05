@@ -128,4 +128,6 @@ h6 {
 .scores-center{
 	display: flex;
 	justify-content: center;
+	/* background-color: #333333; */
 }
+
